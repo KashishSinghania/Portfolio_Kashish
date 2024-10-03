@@ -1,0 +1,92 @@
+<!-- You should have a page title in an h1 element with an id of title
+You should have a short explanation in a p element with an id of description
+You should have a form element with an id of survey-form
+Inside the form element, you are required to enter your name in an input field that has an id of name and a type of text
+Inside the form element, you are required to enter your email in an input field that has an id of email
+If you enter an email that is not formatted correctly, you will see an HTML5 validation error
+Inside the form, you can enter a number in an input field that has an id of number
+The number input should not accept non-numbers, either by preventing you from typing them or by showing an HTML5 validation error (depending on your browser).
+If you enter numbers outside the range of the number input, which are defined by the min and max attributes, you will see an HTML5 validation error
+For the name, email, and number input fields, you can see corresponding label elements in the form, that describe the purpose of each field with the following ids: id="name-label", id="email-label", and id="number-label"
+For the name, email, and number input fields, you can see placeholder text that gives a description or instructions for each field
+Inside the form element, you should have a select dropdown element with an id of dropdown and at least two options to choose from
+Inside the form element, you can select an option from a group of at least two radio buttons that are grouped using the name attribute
+Inside the form element, you can select several fields from a series of checkboxes, each of which must have a value attribute
+Inside the form element, you are presented with a textarea for additional comments
+Inside the form element, you are presented with a button with id of submit to submit all the inputs -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Survey form</title>
+    <link rel="stylesheet" href="surevy_form_style.css">
+</head>
+<body>
+    <div class="container">
+    <div class="head">
+    <h1 id="title">CodeCamp Survey Form</h1>
+    <p id="description">Thank you for taking the time to help us improve the platform</p>
+    </div>
+    <form action="" id="survey-form">
+        <div class="parts">
+        <label for="name" id="name-label">Name:</label><br>
+        <input type="text"  id="name" name="name" placeholder="Enter your Name" required><br>
+        </div>
+        <div class="parts">
+        <label for="email" id="email-label">Email address:</label><br>
+        <input type="email" id="email" name="email" placeholder="Enter your Email" required><br>
+        </div>
+        <div class="parts">
+        <label for="age" id="number-label">Age:</label><br>
+        <input type="number" id="number" name="age" min="18" max="60" placeholder="Enter your Age"><br>
+        </div>
+        <div class="parts">
+        <label for="dropdown">Select your current role:</label><br>
+        <select name="dropdown" id="dropdown">
+            <option value="" disabled selected hidden>Enter your Current Role</option>
+            <option value="Student">Student</option>
+            <option value="Full-time employee">Full-time Employee</option>
+            <option value="Part-time  employee">Part-time Employee</option>
+            <option value="Learner">Learner</option>
+            <option value="Other">Other</option>
+        </select><br>
+        </div>
+        <div class="parts">
+        <p>Would you recommend CodeCamp to a friend?</p>
+        <div class="radio">
+        <input type="radio" id="yes" name="recommend"  value="yes">
+        <label for="yes">Yes</label><br>
+        <input type="radio" id="maybe" name="recommend" value="maybe">
+        <label for="maybe">Maybe</label><br>
+        <input type="radio" id="no" name="recommend" value="no">
+        <label for="no">No</label><br>
+        </div>
+        </div>
+        <div class="parts">
+        <p>What would you like to see improved? (Check all that apply)</p>
+        <div class="checkbox">
+        <input type="checkbox" id="option1" value="Frontend Development">
+        <label for="option1">Frontend Development</label><br>
+        <input type="checkbox" id="option2" value="Backend Development">
+        <label for="option2">Backend Development</label><br>
+        <input type="checkbox" id="option3" value="AI-ML">
+        <label for="option3">AI-ML</label><br>
+        <input type="checkbox" id="option4" value="Data Science">
+        <label for="option4">Data Science</label><br>
+        <input type="checkbox" id="option5" value="DSA">
+        <label for="option5">DSA</label><br>
+        <input type="checkbox" id="option6" value="Graphic Designing">
+        <label for="option6">Graphic Designing</label><br><br>
+        </div>
+        </div>
+        <div class="parts">
+        <label for="textbox">Would you like to recommend any specific changes in our courses?</label><br>
+        <textarea id="textbox" cols="30" rows="10">Enter your feedback  here...</textarea><br>
+        </div>
+        <div class="parts">
+        <button type="submit" id="submit">Submit</button>
+    </form>
+</div>
+</body>
+</html>
